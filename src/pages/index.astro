@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import LinkedIn from '../icons/LinkedIn.astro';
+import Github from '../icons/Github.astro';
+import SocialPill from '../icons/SocialPill.astro';
+import Mail from '../icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Briefcase from '../icons/Briefcase.astro';
+import Code from '../icons/Code.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout title="Porfolio de Eduardo Merino, Desarrollador de Software">
+	<main class="px-4">
+
+
+	<SectionContainer class="py-44 pb-32">
+		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+			Eduardo Merino <a href="https://www.linkedin.com/in/eduardo-merino-88b4b1214/" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a>
+		
+		</h1>
+		<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"><!--Desarrollador de Aplicaciones Multiplataforma. -->
+			<span class="text-yellow-200/90">Ingeniero de Software y Desarrollador de Aplicaciones Multiplataforma.</span>
+			<span class="text-red-200/90">De Madrid, España.</span>
+			<span class="opacity-85">Especializado en Java y Backend.</span>
+		</h2>
+		<nav class="flex gap-4 mt-7 flex-wrap">
+			<SocialPill href="https://www.linkedin.com/in/eduardo-merino-88b4b1214/">
+				<LinkedIn class = "size-4 md:size-6" />
+				LinkedIn</a>
+			</SocialPill>
+			<SocialPill href="https://github.com/Eduardomesut">
+				<Github class = "size-4 md:size-6" />
+				Github</a>
+			</SocialPill>
+			<SocialPill href="mailto:eduardomer@gmail.com">
+				<Mail class = "size-4 md:size-6" />
+				eduardomer@gmail.com</a>
+			</SocialPill>
+		</nav>
+
+	</SectionContainer>
+	<SectionContainer id="experiencia">
+		
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">Experiencia laboral
+			<Briefcase class="size-7" />
+
+		</h2>
+
+		<Experience />
+	</SectionContainer>
+
+	<SectionContainer id="proyectos">
+		
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">Proyectos
+			<Code class="size-7" />
+
+		</h2>
+
+		<Projects />
+	</SectionContainer>
+
+	</main>
+</Layout>
+

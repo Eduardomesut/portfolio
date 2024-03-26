@@ -1,0 +1,35 @@
+---
+import type { Code } from "astro:components"
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+date: 'Actualmente...',
+title: 'Backend Developer - MercurySteam', 
+description: 'Desde el año 2023 trabajando en varios proyectos y centrándome en el desarrollo en C# con el motor de Videojuegos Unity.',
+link: '#',
+},
+{
+date: '2019-2023',
+title: 'Grado en Ingeniería Informática - Universidad Complutense', 
+description: 'Durante dichos años aparte del grado realice distintos proyectos personales y aplicaciones en distintos lenjuages de programación.',
+},
+{
+date: 'Enero 2019',
+title: 'Aplicaciones de uso de Python', 
+description: 'bla bla',
+},
+
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">     
+    {
+        EXPERIENCE.map(experience => (
+        <li class="mb-10 ms-6"> 
+            <ExperienceItem {... experience} />
+        </li>
+        ))
+    }             
+    
+</ol>
+

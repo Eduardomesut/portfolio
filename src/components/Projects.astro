@@ -1,0 +1,51 @@
+---
+import Java from '../icons/Java.astro';
+import Mysql from '../icons/Mysql.astro';
+const TAGS = {
+    JAVA: {
+        name: 'Java',
+        class: 'bg-black text-white',
+        icon:Java,
+
+    },
+    MYSQL: {
+        name: 'MySQL',
+        class: 'bg-black text-white',
+        icon:Mysql,
+
+    }
+}
+const PROJECTS = [
+    {
+        title: 'Demo Liga de Fútbol',
+        description: 'Una demo de una futura aplicación multiplataforma de fútbol con base de datos a tiempo real con la que puedes ver estadísticas de diferentes ligas, equipos y jugadores.',
+        link: 'https://github.com/Eduardomesut/AppDeportes',
+        github: 'https://github.com/Eduardomesut/AppDeportes',
+        image: '/Projects/Demo.webp',
+        tags: [TAGS.JAVA, TAGS.MYSQL]
+    }
+]
+---
+
+{
+
+    PROJECTS.map(({image, title, description, tags}) =>(
+    <article>
+    <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+    <p class="text-lg mb-4 text-pretty">{description}</p>
+    <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag)=> (
+
+            <li>
+                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                <tag.icon class="size-4"></tag.icon> {tag.name}
+                </span>
+            </li>
+        ))}
+        
+    </ul>    
+    <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+    </article>
+
+    ))
+}
